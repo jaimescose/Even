@@ -30,7 +30,7 @@
                               <li><%= link_to "Log out", session_path("current"), method: "delete" %></li>
                           <% end %>
                     <% else %>
-                            <li><%= link_to "Sign up", new_usuario_path %></li>
+                            <li><a href="/usuarios/new">Sign up</a></li>
                             <li><%= link_to "Log in", new_session_path %></li>
                   <% end %>
                   </ul>

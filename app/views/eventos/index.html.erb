@@ -16,12 +16,12 @@
        </div>
      </div>
      <div class="collapsible-body">
-       <p><%= evento.desc %></p>
+       <dic clas="row">
+       <div class="col s6"<p><%= evento.desc %></p></div>
        <div class="col s6 offset-s6">
-         <a class="waves-effect waves-light blue btn-large">
-           <i class="material-icons right">remove_red_eye</i>VER MÁS
-         </a>
+         <%= link_to evento.name, evento %>
        </div>
+     </div>
      </div>
    </li>
    <%end%>
