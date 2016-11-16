@@ -1,0 +1,127 @@
+<div class="container">
+<ul class="collapsible popout" data-collapsible="accordion">
+  <% @eventos.each do |evento|%>
+   <li>
+     <div class="collapsible-header">
+       <br>
+       <div class="row">
+         <div class="col s1 m1 l1"><img class="img-responsive circle" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt=""></div>
+         <div class="col s6 offset-s1">
+           <div class="row">
+             <div clas="col l2"><h5><%= evento.name %></h5></div>
+             <h6>Organizador</h6>
+             45<span class="red-text text-red"><i class="material-icons">favorite</i></span>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="collapsible-body">
+       <p><%= evento.desc %></p>
+       <div class="col s6 offset-s6">
+         <a class="waves-effect waves-light blue btn-large">
+           <i class="material-icons right">remove_red_eye</i>VER MÁS
+         </a>
+       </div>
+     </div>
+   </li>
+   <%end%>
+ </ul>
+</div>
+<script>
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+</script>
+<style type="text/css">
+.timeline {
+position: relative;
+}
+
+.timeline .timeline-event {
+position: relative;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+.timeline .timeline-event .timeline-content {
+position: relative;
+width: calc(50% - 50px);
+}
+
+.timeline .timeline-event::before {
+display: block;
+content: "";
+width: 2px;
+height: calc(50% - 30px);
+position: absolute;
+background: #d2d2d2;
+left: calc(50% - 1px);
+top: 0;
+}
+
+.timeline .timeline-event::after {
+display: block;
+content: "";
+width: 2px;
+height: calc(50% - 30px);
+position: absolute;
+background: #d2d2d2;
+left: calc(50% - 1px);
+top: calc(50% + 30px);
+}
+
+.timeline .timeline-event:first-child::before {
+display: none;
+}
+
+.timeline .timeline-event:last-child::after {
+display: none;
+}
+
+.timeline .timeline-event:nth-child(even) .timeline-content {
+margin-left: calc(50% + 50px);
+}
+
+.timeline .timeline-event:nth-child(odd) .timeline-content {
+margin-left: 0;
+}
+
+.timeline .timeline-badge {
+display: block;
+position: absolute;
+width: 40px;
+height: 40px;
+background: #d2d2d2;
+top: calc(50% - 20px);
+right: calc(50% - 20px);
+border-radius: 50%;
+text-align: center;
+cursor: default;
+}
+
+.timeline .timeline-badge i {
+font-size: 25px;
+line-height: 40px;
+}
+
+@media (max-width: 600px) {
+.timeline .timeline-event .timeline-content {
+  width: calc(100% - 70px);
+}
+.timeline .timeline-event::before {
+  left: 19px;
+}
+.timeline .timeline-event::after {
+  left: 19px;
+}
+.timeline .timeline-event:nth-child(even) .timeline-content {
+  margin-left: 70px;
+}
+.timeline .timeline-event:nth-child(odd) .timeline-content {
+  margin-left: 70px;
+}
+.timeline .timeline-badge {
+  left: 0;
+}
+}
+</style>

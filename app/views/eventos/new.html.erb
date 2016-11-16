@@ -1,0 +1,47 @@
+<div class="container">
+  <h1>Nuevo Evento</h1>
+    <%= form_for @evento do |f| %>
+      <% if @evento.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <%= @evento.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+              <% end %>
+        </ul>
+      </div>
+      <% end %>
+
+      <div class="row">
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">account_circle</i>
+          <%= f.text_field :name%>
+        </div>
+        <div class="input-field col s12 m6 l6">
+        <i class="material-icons prefix">location_on</i>
+        <%= f.text_field :address, placeholder: "Carrera 65 # 85:90, Barranquilla - Atlántico, Colombia" %>
+          </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m12 l12">
+          <i class="material-icons prefix">today</i>
+            <%= f.text_field :fecha , placeholder: "dd-mm-aaaa", class: "datapicker", type: "date"%>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m12 l12">
+          <i class="material-icons prefix">info</i>
+        <%= f.text_field :desc %>
+        </div>
+      </div>
+      <div class="field" hidden>
+        <%= f.label :latitude %><br />
+        <%= f.text_field :latitude %>
+      </div>
+      <div class="field" hidden>
+        <%= f.label :longitude %><br />
+        <%= f.text_field :longitude %>
+      </div>
+      <div class="actions waves-effect waves-ligh green white-text text-white btn"><i class="material-icons right">done</i><%= f.submit %></a></div>
+      <% end %>
+  </div>

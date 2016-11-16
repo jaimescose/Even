@@ -1,0 +1,101 @@
+<div class="container">
+  <h1>Sign Up</h1>
+    <%= form_for @usuario do |f| %>
+      <% if @usuario.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <%= @usuario.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+              <% end %>
+        </ul>
+      </div>
+      <% end %>
+
+      <div class="row">
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">account_circle</i>
+          <%= f.text_field :name, placeholder: "Juanito", type: "text", class: "validate" %>
+        </div>
+        <div class="input-field col s12 m6 l6">
+    	    <input placeholder="Perez" type="text" class="validate">
+          <label for="first_name"></label>
+    	  </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m12 l12">
+          <i class="material-icons prefix">email</i>
+          <%= f.text_field :email, placeholder: "email@company.com", type: "text", class: "validate" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m6 l6">
+          <%= f.text_field :password, placeholder: "Password", type: "password", class: "validate" %>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <%= f.text_field :password_confirmation, placeholder: "Confirm password", type: "password", class: "validate" %>
+        </div>
+      </div>
+      <div class="field" hidden>
+        <%= f.label :tipo %><br />
+        <%= f.text_field :tipo, value: 2%>
+      </div>
+            <h1>Seleccione sus gustos</h1>
+
+      ⁠⁠⁠<div class="container">
+    <div class="row">
+        <div class="col s4" style="  width: 400px;">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="https://images.unsplash.com/photo-1430232324554-8f4aebd06683?dpr=1&auto=format&fit=crop&w=767&h=431&q=80&cs=tinysrgb&crop=" height="200" width="200">
+                    <span class="card-title">Deportes</span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                    <h4>Seleccionado</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col s4" style="width: 400px;">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="https://images.unsplash.com/photo-1435034568314-8303dbda4b8c?dpr=1&auto=format&fit=crop&w=767&h=510&q=80&cs=tinysrgb&crop=" height="200" width="200">
+                    <span class="card-title">Cultura</span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                    <h4>Seleccionado</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col s4" style="width: 400px;">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="https://images.unsplash.com/photo-1416273567255-8abe875affcd?dpr=1&auto=format&fit=crop&w=767&h=575&q=80&cs=tinysrgb&crop=" height="200" width="200">
+                    <span class="card-title">Musica</span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                    <h4>Seleccionado</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col s4" style="width: 400px;">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator"         src="https://images.unsplash.com/photo-1457734933360-81bb2e6ed002?dpr=1&auto=format&fit=crop&w=767&h=512&q=80&cs=tinysrgb&crop=" height="200" width="200">
+                    <span class="card-title">Cine</span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                    <h4>Seleccionado</h4>
+                </div>
+            </div>
+
+        <!--Aqui termina la linea-->
+      </div>
+      <div class="actions waves-effect waves-ligh green white-text text-white btn"><i class="material-icons right">done</i><%= f.submit %></a></div>
+      <div class="waves-effect waves-ligh red btn"><i class="material-icons right">clear</i><%= link_to "Cancelar", root_path, class: "white-text text-white"%></div>
+      <% end %>
+
+  </div>

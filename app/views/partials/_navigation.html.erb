@@ -1,0 +1,40 @@
+  <div id="loader-wrapper">
+      <div id="loader"></div>
+
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+  </div>
+
+  <!--Navigation-->
+   <div class="navbar-fixed">
+      <nav class="blue" role="navigation">
+          <div class="container">
+              <div class="nav-wrapper">
+                <a id="logo-container" href="/" class="brand-logo center">Eventuality</a>
+                  <ul class="left hide-on-med-and-down">
+                      <li><a href="#intro">Servicios</a></li>
+                      <li><a href="#work">Trabajos</a></li>
+                      <li><a href="#team">Equipo</a></li>
+                      <li><a href="#contact">Contacto</a></li>
+                  </ul>
+                  <ul class="right hide-on-med-and-down">
+                    <%  if current_usuario %>
+                          <%  if current_usuario.tipo == 2 %>
+                              <li><%= current_usuario.name %></li>
+                              <li><%= link_to "Mis Eventos", eventos_path %></li>
+                              <li><%= link_to "Crear Evento", new_evento_path %></li>
+                              <li><%= link_to "Log out", session_path("current"), method: "delete" %></li>
+                          <% else %>
+                              <li><%= current_usuario.name %></li>
+                              <li><%= link_to "Eventos", eventos_path %></li>
+                              <li><%= link_to "Log out", session_path("current"), method: "delete" %></li>
+                          <% end %>
+                    <% else %>
+                            <li><%= link_to "Sign up", new_usuario_path %></li>
+                            <li><%= link_to "Log in", new_session_path %></li>
+                  <% end %>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+    </div>

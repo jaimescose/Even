@@ -1,0 +1,19 @@
+<div class="center">
+  <h1>Log in</h1>
+<div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+<%= form_tag sessions_path do %>
+  <div class="field">
+    <i class="material-icons right">account_circle</i>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, params[:email] %>
+  </div>
+  <div class="field">
+    <i class="material-icons right">lock</i>
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+  </div>
+  <div class="actions waves-effect waves-ligh blue white-text text-white btn"><i class="material-icons right">arrow_forward</i><%= submit_tag %></a></div>
+  <br><br>
+<% end %>
+</div>
+</div>
