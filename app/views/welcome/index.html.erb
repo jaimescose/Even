@@ -3,9 +3,11 @@
 ">
   <div class="section no-pad-bot">
       <div class="container">
+        <% if !current_usuario %>
         <div class="row center">
-          <a id="vistazo" href="/eventos" onclick="Materialize.toast('¡Juntos es mejor... Únete!, 4000)"><h4>¡Echa un vistazo!</h4></a>
+          <a id="vistazo" href="/eventos" onclick="unir()"><h4>¡Echa un vistazo!</h4></a>
         </div>
+        <% end %>
         <div class="row center">
           <h1 class="white-text text-white"><b>I<b> <i class="medium material-icons">favorite</i><b> Eventuality<b></h1>
         </div>
@@ -257,5 +259,8 @@
 			document.getElementById("vistazo").className.replace
 			   ( /(?:^|\s)animated tada(?!\S)/g , '' );
 		}
-    Materialize.toast('¡Juntos es mejor... Únete!', 4000)
+    function unir()
+    {
+      Materialize.toast('¡Juntos es mejor... Únete!', 4000)
+    }
 </script>
