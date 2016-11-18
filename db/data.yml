@@ -1,0 +1,111 @@
+
+---
+eventos:
+  columns:
+  - id
+  - name
+  - fecha
+  - desc
+  - created_at
+  - updated_at
+  - latitude
+  - longitude
+  - address
+  - usuario_id
+  records: 
+  - - 5
+    - Indie Music Fest
+    - '2016-11-19'
+    - A una ciudad con diversidad de gustos, pero en la que se escucha mayormente
+      la música latina y folclórica, llega desde este martes, y con 21 bandas, la
+      tercera edición del Indie Music Fest.  El evento, cuyo concierto macro será
+      este sábado, busca promover géneros de música que son poco comerciales en Barranquilla.
+      Pablo Toro, organizador del festival, explica que lo que se pretende es “promover
+      la cultura de la música independiente y alternativa, creando un espacio a los
+      artistas emergentes y a las personas que sienten gusto por este tipo de música
+      y no tienen un espacio que les brinde esta”.
+    - '2016-11-18 04:42:11.059779'
+    - '2016-11-18 04:42:11.059779'
+    - 10.9779291
+    - -74.794226
+    - Cl. 53, Barranquilla, Atlántico, Colombia
+    - 15
+  - - 6
+    - Fiesta de la Música
+    - '2016-11-25'
+    - La Fiesta de la Música es un evento anual que se realiza simultáneamente en
+      150 países del mundo (en 456 ciudades aproximadamente) para celebrar la música
+      en distintos géneros y manifestaciones a través de conciertos gratuitos en vivo
+      y en espacio público.   De origen francés, este primer evento musical mundial
+      cumple este año su trigésimo quinto aniversario.  Barranquilla se une en el
+      2016 a la celebración por décimo año consecutivo.
+    - '2016-11-18 05:07:55.501464'
+    - '2016-11-18 05:07:55.501464'
+    - 11.0055615
+    - -74.82239129999999
+    - 'Cl. 88 #49C-52, Barranquilla, Atlántico, Colombia'
+    - 16
+  - - 7
+    - Festival de la Cerveza
+    - '2017-02-17'
+    - 'Regresa el Festival más gozado por los barranquilleros en el Carnaval, el Festival
+      de la Cerveza 2017 en su aniversario número 26. '
+    - '2016-11-18 06:14:18.368510'
+    - '2016-11-18 06:14:18.368510'
+    - 11.0041072
+    - -74.80698129999999
+    - Barranquilla, Atlantico, Colombia
+    - 19
+
+---
+usuarios:
+  columns:
+  - id
+  - name
+  - email
+  - username
+  - tipo
+  - created_at
+  - updated_at
+  - password_digest
+  records: 
+  - - 6
+    - Administrador
+    - jaimescose01@gmail.com
+    - 
+    - 3
+    - '2016-11-17 03:19:00.222692'
+    - '2016-11-17 03:19:00.222692'
+    - "$2a$10$pKUHYswRPpiVvg5TtvRPVu7bKKx7W.miBmeAgt3HViwvDarsrKwF2"
+  - - 15
+    - Handshake
+    - handshake@gmail.com
+    - 
+    - 2
+    - '2016-11-18 04:29:44.559434'
+    - '2016-11-18 04:29:44.559434'
+    - "$2a$10$rsNbqJAtmMnZ8bSPRc6L0uqRrvScUETF28TdhD3rIRj8qUMgJJlQa"
+  - - 16
+    - Alianza Francesa
+    - alianza@gmail.com
+    - 
+    - 2
+    - '2016-11-18 04:56:14.887491'
+    - '2016-11-18 04:56:14.887491'
+    - "$2a$10$LvLnfxyECgP/TQiIIOFaFOBWrP7l7daH5/O5fPXwnkIuxlIvgcsh6"
+  - - 19
+    - Enrique Chapman
+    - chapmanproduc@gmail.com
+    - 
+    - 2
+    - '2016-11-18 06:10:14.563065'
+    - '2016-11-18 06:10:14.563065'
+    - "$2a$10$5BFxz7uJqZuHGxNrKZgEGuEtqC5Yp39Oo4jkMumtKRTngd.AwzxKC"
+  - - 20
+    - Jaime Escobar
+    - jaimescoseru@gmail.com
+    - 
+    - 1
+    - '2016-11-18 06:43:09.001244'
+    - '2016-11-18 06:43:09.001244'
+    - "$2a$10$fc6pHbR54ltSCGbPXZ5RCuDrxy.OXAejhBEl36qLOZgQGCbwEQNo6"

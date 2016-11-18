@@ -3,7 +3,7 @@
           <div class="card big">
             <div class="card-image">
               <div class="carousel carousel-slider", style="height:300px">
-                <a class="carousel-item"><%= image_tag "#{@evento.id}#{1}"%></a>
+                <a class="carousel-item"><%= image_tag"#{@evento.id}#{1}" %></a>
                 <a class="carousel-item"><%= image_tag"#{@evento.id}#{2}" %></a>
                 <a class="carousel-item"><%= image_tag"#{@evento.id}#{3}" %></a>
               </div>
@@ -15,7 +15,7 @@
                 Este es el coleccion
                 -->
                 <li class="collection-item avatar">
-                  <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/13006526_589627404529073_4153293944546264358_n.jpg?oh=0f626a2daeee87b5b4e85d9811583251&oe=58CAF1C1" alt="" class="circle">
+                  <%= image_tag "#{"org"}#{@evento.usuario.id}", class:"circle" %>
                   <span class="title">Organizador: <%= @evento.usuario.name %></span>
                 </li>
                 <li class="collection-item avatar">
@@ -30,7 +30,11 @@
                   <i class="material-icons circle red">info</i>
                   <span class="title">Descripción: </span>
                   <p><%= @evento.desc %>
-                  </p>
+                  </p><br>
+                  <span class="title">Categorías: </span><br>
+                  <i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="Música">headset </i>
+                  <i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="Arte">color_lens </i>
+                  <i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="Deporte">directions_run </i>
                 </li>
                 <li class="collection-item avatar">
                   <i class="material-icons circle yellow">stars</i>
@@ -62,10 +66,7 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 });
 $(document).ready(function(){
   $('.carousel.carousel-slider').carousel({full_width: true});
+  $('.materialboxed').materialbox();
+  $('.tooltipped').tooltip({delay: 50});
 });
 </script>
-<style>
-.carousel {
-    height: 200px;
-}
-</style>
