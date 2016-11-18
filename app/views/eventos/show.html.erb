@@ -2,8 +2,12 @@
         <div class="col s12 m12">
           <div class="card big">
             <div class="card-image">
-              <img src="https://images.unsplash.com/photo-1470259628879-b26711784142?dpr=1&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=">
-            <span class="card-title"><h2><%= @evento.name%></h2></span>
+              <div class="carousel carousel-slider", style="height:300px">
+                <a class="carousel-item"><%= image_tag "#{@evento.id}#{1}"%></a>
+                <a class="carousel-item"><%= image_tag"#{@evento.id}#{2}" %></a>
+                <a class="carousel-item"><%= image_tag"#{@evento.id}#{3}" %></a>
+              </div>
+              <span class="card-title"><h2><%= @evento.name%></h2></span>
             </div>
             <div class="card-content">
               <ul class="collection">
@@ -13,7 +17,6 @@
                 <li class="collection-item avatar">
                   <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/13006526_589627404529073_4153293944546264358_n.jpg?oh=0f626a2daeee87b5b4e85d9811583251&oe=58CAF1C1" alt="" class="circle">
                   <span class="title">Organizador: <%= @evento.usuario.name %></span>
-                  <a href="#!" class="secondary-content"><i class="material-icons">search</i></a>
                 </li>
                 <li class="collection-item avatar">
                   <i class="material-icons circle blue">location_on</i>
@@ -57,4 +60,12 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   handler.bounds.extendWith(markers);
   handler.fitMapToBounds();
 });
+$(document).ready(function(){
+  $('.carousel.carousel-slider').carousel({full_width: true});
+});
 </script>
+<style>
+.carousel {
+    height: 200px;
+}
+</style>

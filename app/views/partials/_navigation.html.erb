@@ -20,14 +20,19 @@
                   <ul class="right hide-on-med-and-down">
                     <%  if current_usuario %>
                           <%  if current_usuario.tipo == 2 %>
-                              <li><%= current_usuario.name %></li>
                               <li><%= link_to "Mis Eventos", eventos_path %></li>
                               <li><%= link_to "Crear Evento", new_evento_path %></li>
                               <li><%= link_to "Log out", session_path("current"), method: "delete" %></li>
+                              <!--<li><%= current_usuario.name %></li>-->
                           <% else %>
-                              <li><%= current_usuario.name %></li>
+                            <%  if current_usuario.tipo == 3 %>
+                              <li><a href="/usuarios/new">Crear Usuario</a></li>
+                              <li><%= link_to "Log out", session_path("current"), method: "delete" %></li>
+                            <% else %>
                               <li><%= link_to "Eventos", eventos_path %></li>
                               <li><%= link_to "Log out", session_path("current"), method: "delete" %></li>
+                              <!--<li><%= current_usuario.name %></li>-->
+                            <% end %>
                           <% end %>
                     <% else %>
                             <li><a href="/usuarios/new">Sign up</a></li>

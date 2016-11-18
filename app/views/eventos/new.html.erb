@@ -31,7 +31,7 @@
       <div class="row">
         <div class="input-field col s12 m12 l12">
           <i class="material-icons prefix">info</i>
-        <%= f.text_field :desc %>
+          <%= f.text_field :desc , id:"textarea1", class:"materialize-textarea" %>
         </div>
       </div>
       <div class="field" hidden>
@@ -45,3 +45,8 @@
       <div class="actions waves-effect waves-ligh green white-text text-white btn"><i class="material-icons right">done</i><%= f.submit %></a></div>
       <% end %>
   </div>
+  <script>
+  $(document).ready(function() {
+    $('input#input_text, textarea#textarea1').characterCounter();
+  });
+  </script>

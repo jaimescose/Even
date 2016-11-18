@@ -36,10 +36,17 @@
           <%= f.text_field :password_confirmation, placeholder: "Confirm password", type: "password", class: "validate" %>
         </div>
       </div>
-      <div class="field" hidden>
-        <%= f.label :tipo %><br />
-        <%= f.text_field :tipo, value: 1%>
-      </div>
+      <%  if current_usuario %>
+        <div class="field">
+          <%= f.label :tipo %><br />
+          <%= f.text_field :tipo, id: "tipo"%>
+        </div>
+      <% else %>
+        <div class="field" hidden>
+          <%= f.label :tipo %><br />
+          <%= f.text_field :tipo, value: 1, id: "tipo"%>
+        </div>
+      <% end %>
             <h1>Seleccione sus gustos</h1>
 
       ⁠⁠⁠<div class="container">
@@ -94,8 +101,13 @@
 
         <!--Aqui termina la linea-->
       </div>
-      <div class="actions waves-effect waves-ligh green white-text text-white btn"><i class="material-icons right">done</i><%= f.submit %></a></div>
+      <div class="actions waves-effect waves-ligh green white-text text-white btn"><i class="material-icons right">done</i><%= f.submit %></div>
       <div class="waves-effect waves-ligh red btn"><i class="material-icons right">clear</i><%= link_to "Cancelar", root_path, class: "white-text text-white"%></div>
       <% end %>
 
   </div>
+<script>
+  function createuser() {
+    document.getElementById("tipo").value
+  }
+</script>
